@@ -1,0 +1,61 @@
+<!--index.wxml-->
+<view class="container">
+  <view>
+    <!-- title -->
+    <view class="main-title">
+      <view class="f36 b">{{enterpriseMsg.sender_enterprise}}</view>
+      <view class="f12">向您发送了一份首营资料</view>
+    </view>
+    <view class="pdl20 pdr20">
+      <view class="kind-list">
+        <block wx:for="{{materialList}}" wx:for-item="fItem" wx:key="{{fItem.id}}">
+            <view id="{{fItem.id}}" data-type="{{fItem.type}}" data-index="{{index}}" class="kind-list-item" bindtap="kindToggle">
+               <view class="kind-list-item-hd {{fItem.open ? 'kind-list-item-hd-show' : ''}}">
+                   <view class="kind-list-text">{{fItem.name}}</view>
+                   <image class="kind-list-img-lg" src="../../resources/kind/nav.png"></image>
+               </view>
+               <block wx:for="{{fItem.subList}}" wx:key="{item.id}}">
+                   <view id="{{item.id}}" class="kind-list-item-bd-w {{item.open ? 'kind-list-item-bd-w-show' : ''}}" catchtap="kindToggleSm">
+                       <view class="kind-list-item-bd">
+                           <view class="kind-list-text">{{item.name}}({{item.files.length}})</view>
+                           <image class="kind-list-img-md" src="../../resources/kind/form.png"></image>
+                       </view>
+                   </view>
+                   <block wx:for="{{item.files}}" wx:key="{{item.id}}">
+                      <view id="{{item.id}}" class="kind-list-item-bs-w {{item.open ? 'kind-list-item-bs-w-show' : ''}}" catchtap="downloadFile">
+                          <view class="kind-list-item-bs">
+                             <view class="kind-list-text">{{item.name}}</view>
+                             <view class="navigator-arrow"></view>
+                          </view>
+                      </view>
+                  </block>
+               </block>
+           </view>
+        </block>
+      </view>
+    </view>
+    <!-- 发起人 -->
+    <view class="pdl20 pdr20">
+      <view class="lunch-person-info-w">
+        <view class="child">
+          <text class="color_m f12 mr5">发送人</text>
+          <text class="f14">{{enterpriseMsg.sender_user}} ({{enterpriseMsg.sender_mobile}})</text>
+        </view>
+        <view class="mt10">
+            <view class="child">
+              <text class="color_m f12 mr5">接收方</text><text class="f14">{{enterpriseMsg.receiver}}</text>
+            </view>
+        </view>
+        <view class="mt10 f12 color_f9 child">
+          发送时间 {{enterpriseMsg.create_time}}
+        </view>
+      </view>
+    </view>
+    <!-- 广告 -->
+    <view class="vc flex advertisement">
+      <image src="../../resources/pic/advertisement.png"></image>
+    </view>
+  </view>
+  <!-- 技术支持 -->
+  <view class="technique">本服务由杭州神中科技技术支持</view>
+</view>

@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="vc flex view-sao" bindtap="scanCode">
+    <image src="../../resources/kind/sao.png"></image>
+  </view>
+  <view class="f14">
+     <view class="vc flex">扫一扫</view>
+     <view class="vc flex">带有'首营资料电子交换平台'LOGO的二维码</view>
+  </view>
+  <navigator class="flex btn-default" hover-class="none" url="/pages/webview_home/index">
+      <button type="primary" hover-class="none">进入首营资料电子交换平台</button>
+  </navigator>
+  <view class="vc flex">
+    <image class="logo-img" src="../../resources/kind/logo.png"></image>
+  </view>
+  <!-- 技术支持 -->
+  <view class="technique" style="margin-top: 5rpx;">本服务由杭州神中科技技术支持</view>
+</view>

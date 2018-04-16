@@ -1,0 +1,23 @@
+.container {
+  padding: 30rpx;
+}
+.view-sao {
+  margin-top: 23%;
+  margin-bottom: 10%;
+}
+.view-sao image {
+  width: 216rpx;
+  height: 216rpx;
+}
+.logo-img {
+  width: 222rpx;
+  height: 22rpx;
+}
+.btn-default {
+  margin-top:30%;
+  margin-bottom: 30%;
+}
+.btn-default button {
+  background: #03a9f4;
+  width:80%;
+}

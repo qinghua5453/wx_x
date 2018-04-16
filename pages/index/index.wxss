@@ -1,0 +1,101 @@
+/**index.wxss**/
+.main-title {
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+  margin-bottom: 50rpx;
+  margin-top: 50rpx;
+}
+.kind-list-item {
+  margin:20rpx 0;
+  background:#fff;
+  border-radius:4rpx;
+  overflow:hidden;
+}
+.kind-list-item-hd {
+  padding:30rpx;
+  display:flex;
+  align-items:center;
+  transition:opacity .3s;
+}
+.kind-list-item-hd-show {
+  opacity:.2;
+}
+.kind-list-text {
+  flex:1;
+}
+.kind-list-img-lg {
+  width:60rpx;
+  height:60rpx;
+}
+.kind-list-img-md {
+  width:40rpx;
+  height:40rpx;
+}
+.kind-list-item-bd-w {
+  padding: 0 30rpx 0 40rpx;
+  height:0;
+}
+.kind-list-item-bd {
+  border-bottom: 0.5px solid #dedede;
+  display: flex;
+  overflow:hidden;
+  padding: 20rpx 0 20rpx 0;
+  font-size: 28rpx;
+}
+.kind-list-item-bd-w-show {
+  height:auto;
+}
+.navigator-arrow {
+  padding-right: 26rpx;
+  position: relative;
+}
+.navigator-arrow:after {
+  content: " ";
+  display: inline-block;
+  height: 18rpx;
+  width: 18rpx;
+  border-width: 1rpx 1rpx 0 0;
+  border-color: #888888;
+  border-style: solid;
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  position: absolute;
+  top: 50%;
+  margin-top: -8rpx;
+  right: 15rpx;
+}
+.kind-list-item-bs-w {
+  padding: 0 30rpx 0 80rpx;
+  display: none;
+}
+.kind-list-item-bs-w-show {
+  display: block;
+}
+.kind-list-item-bs {
+  border-bottom: 0.5px solid #dedede;
+  display: flex;
+  overflow:hidden;
+  padding: 20rpx 0 20rpx 0rpx;
+  font-size: 24rpx;
+  color: #63bbfd;
+}
+.lunch-person-info-w {
+  margin-top: 40rpx;
+  padding: 40rpx;
+  background: #fff;
+  border-radius: 4rpx;
+}
+.lunch-person-info-w .child {
+  display:flex;
+  align-items:center;
+}
+.advertisement {
+  margin-top: 50rpx;
+  width: 750rpx;
+  height: 440rpx;
+}
+.advertisement image {
+  width: 100%;
+  height: 100%;
+}
+
